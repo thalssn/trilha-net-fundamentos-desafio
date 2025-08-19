@@ -27,7 +27,7 @@ while (exibirMenu)
     Console.WriteLine("1 - Cadastrar veículo");
     Console.WriteLine("2 - Remover veículo");
     Console.WriteLine("3 - Listar veículos");
-    Console.WriteLine("4 - Encerrar");
+    Console.WriteLine("4 - Encerrar \n");
 
     switch (Console.ReadLine())
     {
@@ -52,8 +52,12 @@ while (exibirMenu)
             break;
     }
 
-    Console.WriteLine("Pressione uma tecla para continuar");
-    Console.ReadLine();
+    //Implementado condição para impedir que o programa solicite pressionar tecla  para continuar após selecionar opção 4
+    if (exibirMenu)
+    {
+        Console.WriteLine("Pressione uma tecla para continuar");
+        Console.ReadLine();
+    }
 }
 
 Console.WriteLine("O programa se encerrou");
